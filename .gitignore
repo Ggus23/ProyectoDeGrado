@@ -1,0 +1,69 @@
+# === Node ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+pnpm-lock.yaml
+
+# === Compilados / Builds ===
+dist/
+build/
+.cache/
+.tmp/
+.out/
+.next/
+.vercel/
+
+# === Entornos ===
+.env
+.env.*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# === Docker ===
+/pgdata/
+docker-compose.override.yml
+
+# === Subidas/archivos pesados de desarrollo ===
+uploads/
+*.xlsx
+*.csv
+*.pdf
+
+# === Cobertura / Tests ===
+coverage/
+jest-results.json
+test-results.xml
+
+# === Logs ===
+logs/
+*.log
+*.log.*
+
+# === TypeScript cache ===
+*.tsbuildinfo
+
+# === SO / IDE ===
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# === Frontend específicos ===
+frontend-integrador/.next/
+frontend-integrador/.turbo/
+frontend-integrador/.eslintcache
+frontend-integrador/public/*.map
+
+# === Backend específicos ===
+backend-integrador/uploads/
+backend-integrador/dist/
+backend-integrador/.eslintcache
