@@ -1,0 +1,1 @@
+describe('E2E smoke', () => { it('works', () => expect(true).toBe(true)); });

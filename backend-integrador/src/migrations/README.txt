@@ -1,0 +1,1 @@
+Usa `npm run typeorm:migrate` para generar migrations según las entidades.

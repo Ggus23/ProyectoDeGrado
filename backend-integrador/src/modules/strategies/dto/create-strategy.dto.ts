@@ -1,0 +1,1 @@
+import { StrategyType } from '../../../shared/entities/strategy.entity'; export class CreateStrategyDto { nombre!: string; tipo!: StrategyType; descripcion!: string; fuentes!: string[]; }

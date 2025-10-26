@@ -1,0 +1,1 @@
+export class CreatePgfDto { titulo!: string; carrera?: string; asignatura?: string; periodo?: string; }

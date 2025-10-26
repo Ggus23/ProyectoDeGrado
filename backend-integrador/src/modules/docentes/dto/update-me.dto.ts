@@ -1,0 +1,1 @@
+export class UpdateMeDto { nombre?: string; avatarUrl?: string; }

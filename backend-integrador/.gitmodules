@@ -1,0 +1,3 @@
+[submodule "frontend-integrador"]
+	path = frontend-integrador
+	url = https://github.com/Ggus23/frontend-integrador
