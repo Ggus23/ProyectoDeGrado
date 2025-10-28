@@ -1,1 +1,10 @@
-import { Module } from '@nestjs/common'; import { TypeOrmModule } from '@nestjs/typeorm'; import { SequencerController } from './sequencer.controller'; import { SequenceItem } from '../../shared/entities/sequence-item.entity'; import { PgfUnit } from '../../shared/entities/pgf-unit.entity'; @Module({ imports: [TypeOrmModule.forFeature([SequenceItem, PgfUnit])], controllers: [SequencerController] }) export class SequencerModule {}
+import { Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { SequencerController } from './sequencer.controller';
+import { SequenceItem } from '../../shared/entities/sequence-item.entity';
+import { PgfUnit } from '../../shared/entities/pgf-unit.entity';
+@Module({
+  imports: [TypeOrmModule.forFeature([SequenceItem, PgfUnit])],
+  controllers: [SequencerController],
+})
+export class SequencerModule {}

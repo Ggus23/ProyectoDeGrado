@@ -1,4 +1,3 @@
-
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
@@ -19,11 +18,22 @@ import { AiModule } from './modules/ai/ai.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({ isGlobal: true, envFilePath: ['.env', '.env.local', '.env.development'] }),
+    ConfigModule.forRoot({
+      isGlobal: true,
+      envFilePath: ['.env', '.env.local', '.env.development'],
+    }),
     TypeOrmModule.forRootAsync({ useClass: OrmConfig }),
     ThrottlerModule.forRoot([
-      { name: 'general', ttl: parseInt(process.env.RATE_LIMIT_GENERAL_TTL || '60'), limit: parseInt(process.env.RATE_LIMIT_GENERAL_LIMIT || '100') },
-      { name: 'auth', ttl: parseInt(process.env.RATE_LIMIT_AUTH_TTL || '60'), limit: parseInt(process.env.RATE_LIMIT_AUTH_LIMIT || '10') }
+      {
+        name: 'general',
+        ttl: parseInt(process.env.RATE_LIMIT_GENERAL_TTL || '60'),
+        limit: parseInt(process.env.RATE_LIMIT_GENERAL_LIMIT || '100'),
+      },
+      {
+        name: 'auth',
+        ttl: parseInt(process.env.RATE_LIMIT_AUTH_TTL || '60'),
+        limit: parseInt(process.env.RATE_LIMIT_AUTH_LIMIT || '10'),
+      },
     ]),
     AuthModule,
     DocentesModule,
@@ -36,8 +46,6 @@ import { AiModule } from './modules/ai/ai.module';
     UploadsModule,
     AiModule,
   ],
-  providers: [
-    { provide: APP_GUARD, useClass: ThrottlerGuard },
-  ],
+  providers: [{ provide: APP_GUARD, useClass: ThrottlerGuard }],
 })
 export class AppModule {}

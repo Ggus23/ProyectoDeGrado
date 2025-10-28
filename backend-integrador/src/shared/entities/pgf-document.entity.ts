@@ -1,8 +1,19 @@
-
-import { Column, CreateDateColumn, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  ManyToOne,
+  OneToMany,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+} from 'typeorm';
 import { Docente } from './docente.entity';
 import { PgfUnit } from './pgf-unit.entity';
-export enum PgfStatus { UPLOADED = 'UPLOADED', PARSED = 'PARSED', PUBLISHED = 'PUBLISHED' }
+export enum PgfStatus {
+  UPLOADED = 'UPLOADED',
+  PARSED = 'PARSED',
+  PUBLISHED = 'PUBLISHED',
+}
 @Entity()
 export class PgfDocument {
   @PrimaryGeneratedColumn('uuid') id!: string;

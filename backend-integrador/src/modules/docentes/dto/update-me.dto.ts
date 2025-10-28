@@ -1,1 +1,4 @@
-export class UpdateMeDto { nombre?: string; avatarUrl?: string; }
+export class UpdateMeDto {
+  nombre?: string;
+  avatarUrl?: string;
+}

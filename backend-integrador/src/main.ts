@@ -13,12 +13,20 @@ async function bootstrap() {
     .split(',')
     .map((s) => s.trim())
     .filter(Boolean);
-
+  if (allowed.length === 0) {
+    allowed.push('http://localhost:3000');
+  }
   app.enableCors({
     credentials: true,
-    origin: (origin: string | undefined, cb: (err: Error | null, allow: boolean) => void) => {
-      if (!origin || allowed.includes(origin)) return cb(null, true);
-      return cb(new Error('Not allowed by CORS: ' + origin), false);
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    preflightContinue: false,
+    optionsSuccessStatus: 204,
+    origin: (origin: string | undefined, cb: (err: Error | null, allow?: boolean) => void) => {
+      // Permite llamadas sin 'origin' (Postman/Thunder Client/app nativa)
+      if (!origin) return cb(null, true);
+      if (allowed.includes(origin)) return cb(null, true);
+      return cb(new Error('Not allowed by CORS: ' + origin));
     },
   });
 

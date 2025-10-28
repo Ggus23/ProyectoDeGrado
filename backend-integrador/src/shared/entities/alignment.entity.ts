@@ -1,4 +1,3 @@
-
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { PgfUnit } from './pgf-unit.entity';
 import { Rubric } from './rubric.entity';

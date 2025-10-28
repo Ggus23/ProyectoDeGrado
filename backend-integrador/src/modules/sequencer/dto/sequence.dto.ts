@@ -1,1 +1,7 @@
-export class SequenceItemDto { pgfUnitId!: string; fechaInicio?: string; fechaFin?: string; hito!: string; recursos!: string[]; }
+export class SequenceItemDto {
+  pgfUnitId!: string;
+  fechaInicio?: string;
+  fechaFin?: string;
+  hito!: string;
+  recursos!: string[];
+}

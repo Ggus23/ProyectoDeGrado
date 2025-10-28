@@ -1,5 +1,11 @@
-
-import { Column, CreateDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  OneToMany,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+} from 'typeorm';
 import { OAuthAccount } from './oauth-account.entity';
 import { PgfDocument } from './pgf-document.entity';
 import { Upload } from './upload.entity';

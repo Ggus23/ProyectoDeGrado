@@ -1,6 +1,12 @@
-
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from 'typeorm';
-export enum StrategyType { ABP='ABP', ABProyectos='ABProyectos', ABI='ABI', APS='APS', GAMIFICACION='GAMIFICACION', OTRA='OTRA' }
+export enum StrategyType {
+  ABP = 'ABP',
+  ABProyectos = 'ABProyectos',
+  ABI = 'ABI',
+  APS = 'APS',
+  GAMIFICACION = 'GAMIFICACION',
+  OTRA = 'OTRA',
+}
 @Entity()
 export class Strategy {
   @PrimaryGeneratedColumn('uuid') id!: string;

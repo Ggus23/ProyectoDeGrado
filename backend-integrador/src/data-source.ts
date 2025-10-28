@@ -1,4 +1,3 @@
-
 import 'reflect-metadata';
 import 'dotenv/config';
 import { DataSource } from 'typeorm';
@@ -13,7 +12,18 @@ import { SequenceItem } from './shared/entities/sequence-item.entity';
 import { ChecklistItem } from './shared/entities/checklist-item.entity';
 import { Upload } from './shared/entities/upload.entity';
 const isSSL = process.env.DB_SSL === 'true';
-const entities = [Docente, OAuthAccount, PgfDocument, PgfUnit, Strategy, Rubric, Alignment, SequenceItem, ChecklistItem, Upload];
+const entities = [
+  Docente,
+  OAuthAccount,
+  PgfDocument,
+  PgfUnit,
+  Strategy,
+  Rubric,
+  Alignment,
+  SequenceItem,
+  ChecklistItem,
+  Upload,
+];
 
 const dataSource = new DataSource({
   type: 'postgres',
@@ -25,4 +35,4 @@ const dataSource = new DataSource({
   logging: false,
 });
 
-export default dataSource; 
+export default dataSource;

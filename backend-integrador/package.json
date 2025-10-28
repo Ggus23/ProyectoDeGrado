@@ -37,6 +37,7 @@
     "dotenv": "^16.4.5",
     "exceljs": "^4.4.0",
     "glob": "^10.4.5",
+    "jwks-rsa": "^3.2.0",
     "multer": "^2.0.2",
     "openid-client": "^5.6.5",
     "papaparse": "^5.5.3",

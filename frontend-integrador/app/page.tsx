@@ -1,10 +1,7 @@
-import { DashboardLayout } from "@/components/dashboard-layout"
-import { DashboardContent } from "@/components/dashboard-content"
+import LoginPage from "./login/page"
 
 export default function DashboardPage() {
   return (
-    <DashboardLayout>
-      <DashboardContent />
-    </DashboardLayout>
+    <LoginPage />
   )
 }

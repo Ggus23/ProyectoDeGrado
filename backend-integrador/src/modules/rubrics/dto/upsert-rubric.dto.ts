@@ -1,1 +1,10 @@
-import { RubricType } from '../../../shared/entities/rubric.entity'; export class UpsertRubricDto { pgfUnitId?: string; nombre!: string; tipo!: RubricType; criterios!: any; niveles!: any; version?: number; isPublished?: boolean; }
+import { RubricType } from '../../../shared/entities/rubric.entity';
+export class UpsertRubricDto {
+  pgfUnitId?: string;
+  nombre!: string;
+  tipo!: RubricType;
+  criterios!: any;
+  niveles!: any;
+  version?: number;
+  isPublished?: boolean;
+}

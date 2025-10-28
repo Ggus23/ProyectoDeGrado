@@ -5,11 +5,8 @@ import { ConfigModule } from '@nestjs/config';
 import { OidcService } from './oidc.service';
 
 @Module({
-  imports: [
-    ConfigModule,     
-    HttpModule,       
-  ],
+  imports: [ConfigModule, HttpModule],
   providers: [OidcService],
-  exports: [OidcService], 
+  exports: [OidcService],
 })
 export class OidcModule {}

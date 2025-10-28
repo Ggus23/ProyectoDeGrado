@@ -1,1 +1,10 @@
-import { Module } from '@nestjs/common'; import { TypeOrmModule } from '@nestjs/typeorm'; import { ChecklistController } from './checklist.controller'; import { ChecklistItem } from '../../shared/entities/checklist-item.entity'; import { PgfUnit } from '../../shared/entities/pgf-unit.entity'; @Module({ imports: [TypeOrmModule.forFeature([ChecklistItem, PgfUnit])], controllers: [ChecklistController] }) export class ChecklistModule {}
+import { Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { ChecklistController } from './checklist.controller';
+import { ChecklistItem } from '../../shared/entities/checklist-item.entity';
+import { PgfUnit } from '../../shared/entities/pgf-unit.entity';
+@Module({
+  imports: [TypeOrmModule.forFeature([ChecklistItem, PgfUnit])],
+  controllers: [ChecklistController],
+})
+export class ChecklistModule {}

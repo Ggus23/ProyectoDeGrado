@@ -1,2 +1,4 @@
 import { Request } from 'express';
-export interface RequestWithUser extends Request { user: { sub: string; [k: string]: any }; }
+export interface RequestWithUser extends Request {
+  user: { sub: string; [k: string]: any };
+}
